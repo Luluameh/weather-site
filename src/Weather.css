@@ -1,0 +1,34 @@
+.weather{
+    border: 1px solid #dadde1;
+    color: #444647;
+    padding: 16px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 4px;
+}
+.weather h1{
+    color: #878787;
+    color: rgb(135, 135, 135);
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 29px;
+    margin: 20px 0 0 0;
+}
+.weather ul{
+    margin: 0;
+    padding: 0;
+}
+.weather li{
+font-size: 16px;
+font-weight: 100;
+line-height: 19px;
+list-style: none;
+}
+.weather form{
+    margin-bottom: 20px;
+}
+.weather .num{
+    font-weight: bold;
+    color: black;
+    font-size: 36px;
+}
