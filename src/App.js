@@ -18,6 +18,9 @@ function App() {
       </div>
       <p>
         This was coded by Lucy Ajumi Ameh and it is an 
+        <a href='https://github.com/Luluameh/weather-site'>
+          Open source
+        </a>
       </p>
     </div>
   );
