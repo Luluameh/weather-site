@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import WeatherInfor from './WeatherInfor';
-
 import "./Weather.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
@@ -18,11 +17,13 @@ export default function Weather(props) {
         console.log(response.data);
         setWeatherData({
             load: true,
-temperature: response.data.main.temp,
+            temperature: response.data.main.temp,
+
 wind:response.data.wind.speed,
 city: response.data.name,
-Humidity: response.data.main.humidity,
-iconUrl:' https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png',
+humidity: response.data.main.humidity,
+
+icon: response.data.weather[0].icon,
 description: response.data.weather[0].description,
 
 date: new Date (response.data.dt * 1000),
@@ -31,8 +32,15 @@ date: new Date (response.data.dt * 1000),
         
 
     }
+    function search() {
+        const apiKey = "b9b6cfbec0afa9a98cf8533d0df776c8"
+
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(showData);
+       }
     function handler(event) {
         event.preventDefault();
+        search(city)
         
     }
 function whenTyped(event) {
@@ -59,10 +67,7 @@ function whenTyped(event) {
             </div>
         );
     } else {
-        const apiKey = "b9b6cfbec0afa9a98cf8533d0df776c8"
-        
-        let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&unit=metric`;
-        axios.get(apiUrl).then(showData)
+        search()
 
         return "loadin din din"
     }
