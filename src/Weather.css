@@ -6,7 +6,7 @@
     max-width: 600px;
     border-radius: 4px;
 }
-.weather h1{
+ h1{
     color: #878787;
     color: rgb(135, 135, 135);
     font-size: 24px;
@@ -14,11 +14,11 @@
     line-height: 29px;
     margin: 20px 0 0 0;
 }
-.weather ul{
+ ul{
     margin: 0;
     padding: 0;
 }
-.weather li{
+ li{
 font-size: 16px;
 font-weight: 100;
 line-height: 19px;
@@ -27,8 +27,32 @@ list-style: none;
 .weather form{
     margin-bottom: 20px;
 }
-.weather .num{
+
+ .temperature {
     font-weight: bold;
-    color: black;
-    font-size: 36px;
-}
+    color: rgb(33, 33, 33);
+    font-size: 64px;
+    line-height: 64px;
+    margin-left: 5px;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+  
+   canvas {
+    margin: 20px auto;
+  }
+  
+   .unit {
+    color: rgb(33, 33, 33);
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+    line-height: 1;
+    top: -34px;
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+
+
